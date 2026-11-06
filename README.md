@@ -1,162 +1,128 @@
-# 📘 Laporan Praktikum Pertemuan Ke - 5
+# PRAKTIKUM PEMROGRAMAN BERBASIS WEB
 
-🧑‍🎓 Naufal Maulana Saputra - 4523210083
+![Logo Universitas Pancasila](images/0-logo-up.png)
 
-# 🏫 Website SMP Mentari Ceria
+**Disusun Oleh:**  
+Muhammad Fikri Ash-Shiddiq — 4524210065
 
-Aplikasi website sekolah berbasis Laravel yang menampilkan informasi kegiatan sekolah dan fitur buku tamu digital untuk SMP Mentari Ceria.
+**Dosen Pengampu:**  
+Bambang Riono Arsad, S.Kom., MMSI
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
-</p>
+**Program Studi Teknik Informatika**  
+**Universitas Pancasila**  
+**Tahun Akademik 2026/2027**
 
-## Instalasi
+---
 
-### 1. Clone Repository
+## 📌 Tentang Repository
 
-```bash
-git clone https://github.com/adiwp/pbw.git
-cd smpmentari
-```
+Repository ini merupakan kumpulan hasil pengerjaan tugas dan praktikum mata kuliah **Pemrograman Berbasis Web (PBW)** di Program Studi Teknik Informatika, Universitas Pancasila.
 
-### 2. Install Dependencies
+Repository ini dibuat sebagai dokumentasi proses pembelajaran dan implementasi materi yang telah dipelajari selama kegiatan praktikum, mulai dari pemrograman PHP dasar hingga pengembangan aplikasi web menggunakan framework Laravel.
 
-```bash
-# Install PHP dependencies
-composer install
+Setiap folder di dalam repository merepresentasikan proyek atau tugas dari pertemuan praktikum yang berbeda. Dokumentasi lengkap mengenai proses pengerjaan, implementasi fitur, kode program, serta hasil pengujian dapat ditemukan pada README di masing-masing folder.
 
-# Install Node dependencies
-npm install
-```
+## 🎯 Tujuan Repository
 
-### 3. Setup Environment
+1. Mendokumentasikan seluruh hasil pengerjaan praktikum Pemrograman Berbasis Web.
+2. Menerapkan konsep pemrograman web melalui proyek secara langsung.
+3. Memahami penggunaan PHP, HTML, CSS, database, dan framework Laravel.
+4. Mengembangkan kemampuan dalam membangun aplikasi web yang dinamis dan terstruktur.
+5. Menjadi arsip pembelajaran serta referensi untuk pengembangan proyek berikutnya.
 
-```bash
-# Copy file .env
-cp .env.example .env
+## 📂 Daftar Proyek Praktikum
 
-# Generate application key
-php artisan key:generate
-```
+### 1. Praktikum 1–2: Dasar Pemrograman PHP
 
-### 4. Setup Database
+Mempelajari dasar-dasar pemrograman PHP melalui pembuatan beberapa aplikasi sederhana, seperti halaman biodata mahasiswa dan kalkulator sederhana.
 
-```bash
-# Jalankan migrasi
-php artisan migrate
-```
+Pada tahap ini juga dilakukan pengembangan tampilan menggunakan HTML, CSS, dan Tailwind CSS untuk memahami integrasi antara logika pemrograman dan antarmuka pengguna.
 
-### 5. Build Assets
+**Materi utama:**
+- Dasar PHP dan sintaks pemrograman.
+- Variabel, array, fungsi, dan percabangan.
+- Integrasi PHP dengan HTML.
+- Pengembangan tampilan menggunakan CSS dan Tailwind CSS.
 
-```bash
-# Development
-npm run dev
+### 2. Praktikum 3–4: Pengenalan dan Pengembangan Laravel
 
-# Production
-npm run build
-```
+Mempelajari penggunaan framework Laravel 12 untuk membangun aplikasi web dengan struktur yang lebih terorganisir.
 
-### 6. Jalankan Aplikasi
+Proyek ini berfokus pada pembuatan halaman website statis, pengaturan routing, penggunaan Blade Templating Engine, serta kustomisasi tampilan menggunakan Tailwind CSS.
 
-```bash
-# Menggunakan built-in server
-php artisan serve
+**Materi utama:**
+- Instalasi dan konfigurasi Laravel.
+- Routing dan View.
+- Blade Templating Engine.
+- Struktur dasar proyek Laravel.
+- Navigasi antarhalaman.
 
-# Atau menggunakan composer script (recommended)
-composer dev
-```
+### 3. Praktikum 5: SMP Mentari
 
-Aplikasi akan berjalan di: `http://localhost:8000`
+Mengembangkan aplikasi sistem informasi sederhana untuk SMP Mentari menggunakan Laravel 12.
 
-## 📋 Daftar Isi
+Aplikasi ini memiliki fitur pengelolaan kegiatan sekolah, buku tamu, dashboard administrator, serta konfigurasi website secara dinamis.
 
-- [Tentang Aplikasi](#-tentang-aplikasi)
-- [Fitur Utama](#-fitur-utama)
-- [Tech Stack](#-tech-stack)
-- [Persyaratan Sistem](#-persyaratan-sistem)
-- [Instalasi](#-instalasi)
-- [Penggunaan](#-penggunaan)
-- [Struktur Database](#-struktur-database)
-- [Struktur Project](#-struktur-project)
-- [Pengembangan](#-pengembangan)
-- [Testing](#-testing)
-- [Lisensi](#-lisensi)
+**Fitur utama:**
+- Halaman utama informasi sekolah.
+- Buku tamu untuk pengunjung.
+- Sistem autentikasi menggunakan Laravel Breeze.
+- Dashboard administrator.
+- CRUD data kegiatan.
+- Manajemen pesan buku tamu.
+- Pengaturan website secara dinamis.
 
-## 🎯 Tentang Aplikasi
+### 4. Authbook: Aplikasi Manajemen Buku
 
-Website SMP Mentari Ceria adalah aplikasi web sederhana yang dibangun dengan Laravel 12 untuk menampilkan informasi dan kegiatan sekolah. Aplikasi ini dilengkapi dengan fitur buku tamu digital yang memungkinkan pengunjung meninggalkan pesan dan kesan mereka.
+Mengembangkan aplikasi manajemen buku berbasis Laravel 12 dengan menggunakan Filament 3.x sebagai admin panel.
 
-### Fitur Halaman:
+Proyek ini berfokus pada pengelolaan data buku dan penulis, pengembangan fitur administrasi, serta penerapan sistem pembatasan hak akses pengguna.
 
-1. **Halaman Home** - Menampilkan kegiatan-kegiatan terbaru sekolah
-2. **Buku Tamu** - Formulir interaktif untuk pengunjung meninggalkan pesan
+**Fitur utama:**
+- Manajemen data buku dan penulis.
+- CRUD menggunakan Filament Resource.
+- Pencarian dan filter data buku.
+- Pengelolaan kategori buku.
+- Relasi One-to-Many dan Many-to-Many.
+- Dashboard statistik dan grafik.
+- Role-Based Access Control (RBAC).
 
-## ✨ Fitur Utama
+## 🛠️ Teknologi dan Tools
 
-- ✅ **Tampilan Kegiatan Sekolah** - Showcase kegiatan terbaru dengan card design
-- ✅ **Buku Tamu Digital** - Pengunjung dapat meninggalkan pesan
-- ✅ **Form Validasi** - Validasi input untuk nama, email, dan pesan
-- ✅ **Real-time Feedback** - Notifikasi sukses/error setelah submit
-- ✅ **Responsive Design** - Tampilan optimal di semua device
-- ✅ **Timestamp Relatif** - Menampilkan waktu pesan (e.g., "2 jam yang lalu")
-- ✅ **Modern UI/UX** - Desain clean dengan Tailwind CSS
+Beberapa teknologi dan tools yang digunakan selama pengerjaan praktikum:
 
-## 🛠️ Tech Stack
+| Teknologi | Penggunaan |
+|---|---|
+| HTML | Struktur halaman web |
+| CSS | Pengaturan tampilan |
+| PHP | Logika pemrograman backend |
+| Tailwind CSS | Pengembangan antarmuka |
+| Laravel 12 | Framework aplikasi web |
+| Blade | Template halaman Laravel |
+| MySQL | Pengelolaan database |
+| SQLite | Database aplikasi Authbook |
+| Laravel Breeze | Autentikasi pengguna |
+| Filament 3.x | Admin panel |
+| Livewire | Interaksi antarmuka dinamis |
+| Composer | Manajemen dependensi |
+| Git & GitHub | Version control dan penyimpanan proyek |
 
-### Backend
-- **Laravel** 12.x - PHP Framework
-- **PHP** ^8.2 - Programming Language
-- **SQLite** - Database (Development)
-- **Eloquent ORM** - Database Management
+## 📚 Hasil Pembelajaran
 
-### Frontend
-- **Blade Templates** - Template Engine
-- **Tailwind CSS** 4.0 - CSS Framework
-- **Vite** 7.0 - Asset Bundler & HMR
-- **Axios** - HTTP Client
+Melalui keseluruhan rangkaian praktikum ini, saya memperoleh pengalaman dalam memahami dan menerapkan konsep pengembangan aplikasi berbasis web.
 
-### Development Tools
-- **Laravel Sail** - Docker Development Environment
-- **Pest PHP** - Testing Framework
-- **Laravel Pint** - Code Style Fixer
-- **Concurrently** - Multi-command Runner
+Pembelajaran dimulai dari pembuatan halaman sederhana menggunakan PHP, kemudian berkembang menjadi penggunaan framework Laravel untuk membangun aplikasi yang memiliki pengelolaan database, autentikasi, operasi CRUD, dan pembatasan hak akses pengguna.
 
-## 📸 Hasil Screenshot Tampilan Website SMP Mentari
+Selain memahami teknologi yang digunakan, praktikum ini juga memberikan pengalaman dalam menyelesaikan permasalahan teknis (*debugging*), mengembangkan antarmuka pengguna, serta mengelola proyek menggunakan Git dan GitHub.
 
-### Halaman Home
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a64d64a0-c13f-4f85-b745-ca34a580c4bc" />
+## 📝 Penutup
 
-### Halaman Buku Tamu
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fc71c127-20ae-4606-9063-73d93efc70eb" />
+Repository ini diharapkan dapat menjadi dokumentasi perjalanan pembelajaran saya selama mengikuti praktikum Pemrograman Berbasis Web.
 
-### Halaman Register
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/425f065c-c92d-47e8-95b2-c27041a9b905" />
+Seluruh proyek di dalamnya merupakan hasil implementasi materi praktikum yang dikembangkan secara bertahap sebagai bentuk penerapan pengetahuan dan peningkatan kemampuan dalam bidang pengembangan web.
 
-### Halaman Login
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/216e71f2-a8bc-46f5-9af4-9f48c943a1fb" />
+---
 
-### Halaman Dashboard
-
-Dashboard di akses ketika sudah login dan bisa mengatur atau pusat kendali dari website SMP Mentari
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d7cc61dc-9829-4b7c-b6fe-8f0ca5219578" />
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f5ad41b2-4b7e-4a5f-84fd-ee30bff50e25" />
-
-Kendali atau mengelola kegiatan SMP Mentari
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8cb3d83f-d7ef-435a-8eca-88d56d8b293a" />
-
-Kelola Buku Tamu
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/28af5ada-efb2-4f30-8b79-9ca7e41ea285" />
-
-Konfigurasi tampilan Home Kegiatan per page dengan default nya 6 (Bisa diubah sesuai keinginan)
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c90e5fe0-69c9-4137-8112-a0101aef31d7" />
-
-<p align="center">
-Made with ❤️ for SMP Mentari Ceria
-</p>
+**Muhammad Fikri Ash-Shiddiq**  
+**4524210065**  
+Teknik Informatika — Universitas Pancasila
