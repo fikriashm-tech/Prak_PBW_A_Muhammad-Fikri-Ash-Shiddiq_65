@@ -19,17 +19,17 @@ class BookPolicy
 
     public function create(User $user): bool
     {
-        return true; // Semua user bisa buat buku baru
+        return in_array($user->role, ['admin', 'staff']);
     }
 
     public function update(User $user, Book $book): bool
     {
-        return true; // Semua user bisa edit
+        return in_array($user->role, ['admin', 'staff']);
     }
 
     public function delete(User $user, Book $book): bool
     {
-        return true; // Semua user bisa hapus
+        return $user->role === 'admin';
     }
 
     public function restore(User $user, Book $book): bool

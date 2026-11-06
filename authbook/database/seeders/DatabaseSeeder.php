@@ -11,16 +11,31 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Buat admin user untuk Filament
+        // 1. Buat akun dengan jabatan ADMIN
         User::factory()->create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
+            'role' => 'admin', // <-- Tambahan penanda role
         ]);
 
-        // Buat 10 authors
+        // 2. Buat akun dengan jabatan STAFF
+        User::factory()->create([
+            'name' => 'Staff User',
+            'email' => 'staff@example.com',
+            'role' => 'staff', // <-- Tambahan penanda role
+        ]);
+
+        // 3. Buat akun dengan jabatan VIEWER
+        User::factory()->create([
+            'name' => 'Viewer User',
+            'email' => 'viewer@example.com',
+            'role' => 'viewer', // <-- Tambahan penanda role
+        ]);
+
+        // Buat 10 authors (TETAP SAMA SEPERTI ASLINYA)
         $authors = Author::factory(10)->create();
 
-        // Buat 50 books dengan random authors
+        // Buat 50 books dengan random authors (TETAP SAMA SEPERTI ASLINYA)
         Book::factory(50)->create([
             'author_id' => fn() => $authors->random()->id,
         ]);

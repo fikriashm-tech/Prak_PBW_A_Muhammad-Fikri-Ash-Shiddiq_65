@@ -34,11 +34,27 @@ class BookResource extends Resource
                             ->required()
                             ->maxLength(255),
 
+                        Forms\Components\Textarea::make('description')
+                            ->rows(3)
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
+
                         Forms\Components\Select::make('author_id')
                             ->relationship('author', 'name')
                             ->searchable()
                             ->preload()
                             ->required()
+                            ->createOptionForm([
+                                Forms\Components\TextInput::make('name')
+                                    ->required()
+                                    ->maxLength(255),
+                            ]),
+
+                        // POSISI YANG BENER BUAT KATEGORI DI SINI BREE 👇
+                        Forms\Components\Select::make('categories')
+                            ->relationship('categories', 'name')
+                            ->multiple()
+                            ->preload()
                             ->createOptionForm([
                                 Forms\Components\TextInput::make('name')
                                     ->required()

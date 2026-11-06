@@ -1,58 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# LAPORAN PRAKTIKUM PEMROGRAMAN BERBASIS WEB
+## Modul: Aplikasi Manajemen Buku (Laravel & Filament 3.x) - Authbook
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[cover](images/0-logo-up.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Disusun Oleh:**
+Muhammad Fikri Ash-Shiddiq - 4524210065
 
-## Learning Laravel
+**Dosen Pengampu:**
+Bambang Riono Arsad, S.Kom., MMSI
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Program Studi Teknik Informatika**
+**Universitas Pancasila**
+**2026/2027**
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+</div>
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 📑 Daftar Isi
+- [Tugas 1: Implementasi Dasar](#tugas-1-implementasi-dasar)
+- [Tugas 2: Kustomisasi dan Pengembangan](#tugas-2-kustomisasi-dan-pengembangan)
+- [Tugas 3: Analisis dan Dokumentasi](#tugas-3-analisis-dan-dokumentasi)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+---
 
-```bash
-composer require laravel/boost --dev
+## 🚀 Tugas 1: Implementasi Dasar
 
-php artisan boost:install
-```
+Pada bagian ini, saya melakukan inisiasi *project* Laravel baru, mengonfigurasi database SQLite, dan menginstal *framework* admin panel Filament 3.x. Saya juga telah membuat Model, Migration, Factory, Seeder, dan Resource untuk entitas `Author` dan `Book` beserta relasi *One-to-Many*.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Berikut adalah bukti implementasi dasar fungsionalitas CRUD:
 
-## Contributing
+**1. Halaman Utama Admin Panel**
+![Dashboard Admin Panel](images/login.png)
+> *Keterangan: Tampilan awal saat berhasil login ke dalam sistem admin panel Filament.*
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**2. Halaman Daftar Buku (List Books)**
+![Daftar Buku Ter-seed](images/listbook.png)
+> *Keterangan: Tabel `BookResource` yang menampilkan 50 data buku hasil dari eksekusi database seeder.*
 
-## Code of Conduct
+**3. Form Tambah Buku (Create Book)**
+![Form Create Book](images/create.png)
+> *Keterangan: Halaman form pembuatan buku baru, lengkap dengan input text, select relasi, dan upload cover.*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**4. Uji Coba Fitur Pencarian (Search)**
+![Hasil Pencarian](images/pencarian.png)
+> *Keterangan: Hasil tabel ketika mengetikkan kata kunci tertentu pada kolom pencarian.*
 
-## Security Vulnerabilities
+**5. Uji Coba Fitur Filter**
+![Filter Aktif](images/filter.png)
+> *Keterangan: Tabel daftar buku ketika filter status (contoh: Available) dan tahun diterapkan.*
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🛠️ Tugas 2: Kustomisasi dan Pengembangan
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Pada tahap ini, aplikasi dikembangkan lebih lanjut dengan menambahkan beberapa fitur esensial yang membuat manajemen data menjadi lebih kompleks dan aman.
+
+**1. Penambahan Field Deskripsi Buku**
+![Kolom Deskripsi](images/deskripsi.png)
+> *Keterangan: Menambahkan tipe data Textarea pada database dan UI form Filament untuk menyimpan sinopsis atau deskripsi buku.*
+
+**2. Implementasi Role-Based Access Control (RBAC)**
+![Role Based Access](images/staff.png)
+> *Keterangan: Penerapan Laravel Policies. Saat login sebagai Staff, tombol/aksi "Delete" tidak ditampilkan karena hak akses dibatasi.*
+
+**3. Widget Dashboard (Stats & Chart)**
+![Widget Dashboard](images/chart.png)
+> *Keterangan: Menambahkan Widget Statistik (Total Books, Authors) dan Pie Chart untuk membandingkan jumlah buku Available vs Borrowed.*
+
+**4. Kategori Buku (Relasi Many-to-Many)**
+![Kategori Banyak](images/kategori.png)
+> *Keterangan: Relasi tabel pivot `book_category` yang memungkinkan pengguna memilih lebih dari satu kategori di form pengisian data buku.*
+
+---
+
+## 📊 Tugas 3: Analisis dan Dokumentasi
+
+### 1. Penjelasan Arsitektur
+
+#### A. Diagram ERD (Entity Relationship Diagram)
+![ERD Authbook](images/erd-buku.png)
+> *Keterangan: Struktur relasi database aplikasi manajemen buku.*
+
+#### B. Penjelasan Relasi Antar Tabel
+* **One-to-Many (Author ke Book):** Satu penulis (*Author*) dapat memiliki banyak buku (*Books*), namun satu buku hanya ditulis oleh satu penulis utama. Dihubungkan melalui *foreign key* `author_id` pada tabel `books`.
+* **Many-to-Many (Book ke Category):** Satu buku dapat memiliki banyak kategori, dan satu kategori menampung banyak buku. Relasi ini dijembatani oleh tabel pivot `book_category`.
+* **Users (Independen):** Tabel ini berdiri secara independen tanpa relasi langsung ke entitas buku dalam ruang lingkup aplikasi saat ini. Fungsinya difokuskan untuk sistem autentikasi dan *Role-Based Access Control* (Admin, Staff, Viewer).
+
+#### C. Penjelasan Flow Aplikasi (Request hingga Response)
+1. **Request:** Pengguna (Admin) mengakses URL spesifik, misalnya `/admin/books`.
+2. **Routing & Middleware:** Laravel memproses *request* tersebut melalui *routing* internal Filament. *Middleware* memvalidasi status *login* dan *Policy* untuk membatasi aksi berdasarkan *role*.
+3. **Controller / Livewire:** Komponen Livewire milik Filament menerima permintaan data.
+4. **Model & Database:** Model memanggil Eloquent ORM untuk mengeksekusi *query* ke database SQLite, lalu memuat data dan relasinya.
+5. **View & Response:** Data di-render ke dalam UI berbasis Tailwind CSS lalu dikembalikan ke *browser* pengguna sebagai antarmuka HTML interaktif.
+
+### 2. Perbandingan dengan Pendekatan Tradisional
+
+#### A. Bandingkan Membuat CRUD: Filament vs Manual
+Pada CRUD tradisional, pembuatan *Route*, *Controller*, View (Blade), validasi, hingga proses upload file dilakukan secara terpisah dari awal. Sebaliknya, Filament menerapkan arsitektur *declarative* di mana developer cukup mendefinisikan skema data pada kelas `Resource`. Filament kemudian menerjemahkannya dan melakukan *generate* UI fungsional, pencarian, dan filter dalam hitungan menit.
+
+#### B. Kelebihan dan Kekurangan
+* **Kelebihan Filament:** Sangat cepat untuk *Rapid Application Development* (RAD), UI/UX modern secara *out-of-the-box*, dan memiliki fitur ekosistem yang terintegrasi (Widget, Relasi, Form).
+* **Kekurangan Filament:** Memiliki kurva belajar (*learning curve*) tinggi untuk melakukan kustomisasi di luar konvensi standar, dan dirasa berlebihan (*overkill*) untuk proyek yang terlalu sederhana.
+
+#### C. Kapan Menggunakan Filament?
+* **Gunakan untuk:** *Admin Panel*, *Backoffice*, *Dashboard* internal perusahaan, atau aplikasi CRUD yang menitikberatkan pada pengolahan data masif secara cepat.
+* **Jangan gunakan untuk:** *Landing Page* publik, tampilan antarmuka *e-commerce*, atau aplikasi dengan kebutuhan desain UI kustom yang sangat unik.
+
+### 3. Refleksi Pembelajaran
+
+#### A. Apa yang Dipelajari?
+Saya mempelajari arsitektur pengembangan web modern menggunakan Laravel 12 dan Filament 3.x. Saya lebih memahami implementasi RAD, penyusunan database relasional tingkat lanjut (*Pivot Table*), *caching* konfigurasi, hingga penerapan pembatasan hak akses berbasis keamanan (RBAC) melalui fitur Laravel *Policies*.
+
+#### B. Kesulitan yang Dihadapi
+1. **Konfigurasi Cache Database:** Mengalami kesulitan saat sistem terus mengarah ke database MySQL padahal konfigurasi diubah ke SQLite. Ini diatasi dengan membersihkan memori sistem via `php artisan optimize:clear`.
+2. **Error Rendering Filament:** Mengalami bentrok antarmuka akibat kesalahan menempatkan blok form Kategori ke dalam fungsi khusus Filter Tabel. Saya memperbaikinya dengan merujuk ulang ke dokumentasi struktur kelas `Resource` di Filament.
+
+#### C. Rencana Pengembangan Selanjutnya
+Ke depan, aplikasi ini dapat dikembangkan menjadi sistem sirkulasi terpadu dengan menambahkan **Modul Peminjaman (Borrowing Log)**. Fitur ini akan mencatat identitas peminjam, tanggal tenggat (*due date*), petugas yang melayani, hingga perhitungan nominal denda jika terdapat keterlambatan, sehingga fungsinya berkembang menjadi Sistem Informasi Perpustakaan lengkap.
