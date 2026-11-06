@@ -1,6 +1,8 @@
 # 📘 Laporan Praktikum Pertemuan 1 dan 2
 ### Tugas 1 dan Tugas 2
 
+![cover](images/logo-cover.png)
+
 🧑‍🎓 **Muhammad Fikri Ash Shiddiq - 4524210065**
 
 # 💻 Praktikum Pemrograman Web – Dasar PHP
