@@ -111,7 +111,7 @@ Aplikasi ini menggunakan Blade templating dengan integrasi Tailwind CSS.
 
 Untuk menjalankan project:
 ```bash
-```composer dev
+```composer dev```
 
 **1. Halaman Utama**
 ![Home](images/home.png)
