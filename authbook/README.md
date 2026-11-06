@@ -4,7 +4,7 @@
 ## Modul: Aplikasi Manajemen Buku (Laravel & Filament 3.x) - Authbook
 
 
-[cover](images/0-logo-up.png)
+![cover](images/0-logo-up.png)
 
 <br>
 
