@@ -125,8 +125,8 @@ composer dev
 **4. Kegiatan**
 ![Halaman Kegiatan](images/kegiatan.png)
 
-**4. Catatan Buku Tamu**
+**5. Catatan Buku Tamu**
 ![Halaman Buku Tamu](images/bukutamu1.png)
 
-**4. Konfigurasi Website**
+**6. Konfigurasi Website**
 ![Halaman Konfigurasi Website](images/konfigurasiweb.png)
