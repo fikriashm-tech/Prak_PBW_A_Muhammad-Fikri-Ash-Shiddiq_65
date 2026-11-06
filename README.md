@@ -1,6 +1,6 @@
 # PRAKTIKUM PEMROGRAMAN BERBASIS WEB
 
-![Logo Universitas Pancasila]![cover](images/logo-cover.png)
+![Logo Universitas Pancasila](images/logo-cover.png)
 
 **Disusun Oleh:**  
 Muhammad Fikri Ash-Shiddiq — 4524210065
