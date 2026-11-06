@@ -1,58 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LAPORAN PRAKTIKUM PEMROGRAMAN BERBASIS WEB
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Modul 3: Instalasi, Konfigurasi, dan Halaman Pertama Laravel
 
-## About Laravel
+![cover](images/0-logo-up.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Disusun Oleh:**
+Muhammad Fikri Ash-Shiddiq - 4524210065
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Dosen Pengampu:**
+Bambang Riono Arsad, S.Kom., MMSI
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Program Studi Teknik Informatika**
+**Universitas Pancasila**
+**2026/2027**
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🎯 Tujuan Pembelajaran
+1. Menginstal proyek Laravel 12 baru menggunakan Composer.
+2. Menjalankan *server development* lokal menggunakan `php artisan serve`.
+3. Memahami struktur folder esensial pada framework Laravel.
+4. Mendefinisikan rute (*Route*) sederhana di `routes/web.php`.
+5. Membuat dan memodifikasi file tampilan (*View*) menggunakan *Blade Templating Engine*.
+6. Memahami alur kerja fundamental Laravel: `Request -> Route -> View -> Response`.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🚀 Langkah Implementasi Praktikum
 
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
+### 1. Inisialisasi Proyek Laravel
+Proyek ini (LaraPress/WebGue) dibangun menggunakan instalasi framework Laravel terbaru (versi 12) dengan perintah:
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer create-project laravel/laravel: "^12.0" LaraPress
 ```
+Server lokal dijalankan menggunakan perintah bawaan Artisan yaitu `php artisan serve`.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Pengaturan Routing (`routes/web.php`)
+Sesuai dengan alur kerja Laravel, saya mendefinisikan tiga rute utama untuk aplikasi statis ini:
+* `/` (Home) -> Mengembalikan view `welcome.blade.php`.
+* `/tentang-kami` (About) -> Mengembalikan view `about.blade.php`.
+* `/kontak` (Tugas Mandiri) -> Mengembalikan view `kontak.blade.php`.
 
-## Contributing
+### 3. Pembuatan Views & Kustomisasi UI (Tailwind CSS)
+Sebagai bentuk eksplorasi tambahan di luar HTML dasar yang ada pada modul, saya mengimplementasikan **Tailwind CSS** untuk mempercantik tampilan UI antarmuka. 
+* Semua halaman dilengkapi dengan *Navigation Bar* yang interaktif untuk menghubungkan rute Welcome, Kontak, dan About.
+* Penggunaan tipografi yang modern dan tata letak (*layout*) yang responsif.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📝 Penyelesaian Tugas Mandiri
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Sesuai dengan instruksi **Bagian 6: Tugas Mandiri (Wajib)** pada modul, saya telah menyelesaikan hal berikut:
+1. Membuat halaman statis baru bernama **"Kontak"**.
+2. Mendaftarkan rute `/kontak` pada `routes/web.php`.
+3. Mengisi halaman tersebut dengan informasi kontak fiktif.
+4. Menambahkan *link* navigasi (Navbar) yang saling terhubung di semua halaman (Home, About, dan Kontak).
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📸 Dokumentasi Hasil (Screenshots)
 
-## License
+Berikut adalah hasil eksekusi dari proyek yang telah berjalan di *localhost*:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**1. Halaman Utama (Welcome / Home)**
+> Menampilkan halaman utama yang dimodifikasi dengan sentuhan desain Tailwind CSS beserta tombol navigasi dan teks hero.
+
+![Halaman Utama](images/Welcome.png)
+
+**2. Halaman Tentang Kami (About)**
+> Halaman statis yang berisi informasi singkat mengenai proyek ini.
+
+![Halaman Tentang Kami](images/About.png)
+
+**3. Halaman Kontak (Tugas Mandiri)**
+> Halaman hasil tugas mandiri yang memuat informasi kontak fiktif.
+
+![Halaman Kontak](images/Kontak.png)
+
+---
+*Laporan ini dibuat sebagai bentuk penyelesaian Modul 3 Praktikum PBW.*

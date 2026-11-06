@@ -26,7 +26,7 @@
     <!-- Konten Welcome -->
     <main class="flex-grow flex items-center justify-center p-6">
         <div class="text-center max-w-3xl">
-            <span class="px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-6 inline-block">🚀 Laravel & Tailwind</span>
+            <span class="px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm tracking-wide mb-6 inline-block"> Laravel </span>
             <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
                 Selamat Datang di <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Website Kami</span>
             </h1>
